@@ -1,0 +1,12 @@
+build
+!.vscode/*
+
+# macOS hidden files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.TemporaryItems
