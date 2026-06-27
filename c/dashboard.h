@@ -7,8 +7,7 @@
 #include "Debug.h"
 #include <stdlib.h> // malloc() free()
 
-
-
+// Enumerations
 enum DashboardMode {
     MODE_NORMAL,
     MODE_BYPASS_ON,
@@ -22,6 +21,7 @@ enum PumpStatus {
     PUMP_CHECK_WATER        // High current, high RPM, check water level or clean filter
 };
 
+// Function declarations
 int Dashboard_Initialize(void);
 int Dashboard_Shutdown(void);
 
@@ -35,15 +35,7 @@ int Dashboard_UpdateCurrentTime(void);
 
 int Dashboard_Display(void);
 
-// Everything operates on this global dashboard instance
-struct Dashboard {
-    enum DashboardMode mode;
-    char* nextEvent;
-    enum PumpStatus pumpStatus;
-    PAINT_TIME currentTime;
-    bool isInitialized;
-    UBYTE* frameBuffer;
-} dashboard;
-
+// Global dashboard instance - defined in dashboard.c, declared extern here
+extern struct Dashboard dashboard;
 
 #endif // DASHBOARD_H
