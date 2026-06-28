@@ -34,6 +34,7 @@ include_directories(./lib/GUI)
 # generate an executable file
 add_executable(epd 
 main.c
+dashboard.c
 )
 
 # enable usb output, disable uart output

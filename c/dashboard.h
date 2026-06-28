@@ -5,7 +5,7 @@
 #include "GUI_Paint.h"
 #include "ImageData.h"
 #include "Debug.h"
-#include <stdlib.h> // malloc() free()
+// #include <stdlib.h> // malloc() free()
 
 // Enumerations
 enum DashboardMode {

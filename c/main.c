@@ -1,4 +1,5 @@
-#include "EPD_Test.h"   //Examples
+// #include "EPD_Test.h"   //Examples
+#include "dashboard.h"
 
 int main(void)
 {
@@ -15,7 +16,9 @@ int main(void)
 
     // EPD_2in13_V2_test();
 	// EPD_2in13_V3_test();
-    EPD_2in13_V4_test();
+ 
+    // ---->   EPD_2in13_V4_test();   // This is my display.
+
     // EPD_2in13bc_test();
     // EPD_2in13b_V3_test();
     // EPD_2in13b_V4_test();
@@ -42,6 +45,10 @@ int main(void)
     // EPD_7in5_V2_test_old();
     // EPD_7in5b_V2_test();
     // EPD_7in5b_V2_test_old();
+
+    Dashboard_Initialize();
+    DEV_Delay_ms(10000);
+    Dashboard_Shutdown();
 
     return 0;
 }
