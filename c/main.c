@@ -47,7 +47,11 @@ int main(void)
     // EPD_7in5b_V2_test_old();
 
     Dashboard_Initialize();
-    DEV_Delay_ms(10000);
+    for(int i=0; i<10; i++)
+    {
+        DEV_Delay_ms(1000);
+        Dashboard_Display();
+    }
     Dashboard_Shutdown();
 
     return 0;
